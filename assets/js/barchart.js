@@ -10,14 +10,26 @@ svg.selectAll('rect') // add the rectangles with selectAll('rect')
 		.data(dataset) // set the data to the dataset from above
 		.enter() // append the rectanlges
 		.append('rect')
-			.attr('x', function(d, i) { // d is how to reference the dataset, i is the index
-				return i * (w / dataset.length); // set the x position of the bar by the order according to the dataset.
-			})
-			.attr('y', function(d) { // set the y function, just going to use the dataset
-				return h - (d * 4); // have to take the height and subtract the data element
-			}) // this sets it at the bottom
-			.attr('width', w / dataset.length - padding)// setting the width by dividing the length of the dataset minus the padding.
-			.attr('height', function(d) {// setting the height which will be dynmaic depending on the dataset
-				return d * 4;// we know the height is 100 and the dataset is from 5 to 25, 4 * 25 = 100
-			})
-			.style('fill', 'steelblue');// add some color to the bars.
+			//.attr('x', function(d, i) { // d is how to reference the dataset, i is the index
+			//	return i * (w / dataset.length); // set the x position of the bar by the order according to the dataset.
+			//})
+			//.attr('y', function(d) {// set the y function, just going to use the dataset
+			//	return h - (d*4);// have to take the height and subtract the data element
+			// }) // this sets it at the bottom
+			//.attr('width', w / dataset.length - padding)// setting the width by dividing the length of the dataset minus the padding.
+			//.attr('height', function (d) {// setting the height which will be dynmaic depending on the dataset
+			//   return d * 4;// we know the height is 100 and the dataset is from 5 to 25, 4 * 25 = 100
+			//})
+			//.attr('fill', function (d) {
+			//	return 'rgb(' + (d * 10) + ', 70, 130)';
+			//});// add some color to the bars.
+
+			// We can also write the same code in a more concise way
+			// using this JSON type of syntax that D3 provides.
+			.attr({
+				x: function(d, i) { return i * (w / dataset.length); },
+				y: function(d) { return h - (d * 4); },
+				width: w / dataset.length - padding,
+				height: function(d) { return d * 4; },
+				fill: function(d) { return 'rgb(' + (d * 10) + ', 70, 130)';}
+			});// we can also creat an Object to contain all the code.
