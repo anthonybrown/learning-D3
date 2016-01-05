@@ -1,0 +1,23 @@
+var w = 200; // set the width of the svg container.
+var h = 200; // set the height of the svg container.
+var padding = 2; // give some padding to the svg rect.
+var dataset = [5, 10, 15, 20, 25]; // defining a dataset.
+var svg = d3.select('#output').append('svg') // create and append the svg instance to an HTML element.
+						.attr('width', w) // set the 'width' to the variable w.
+						.attr('height', h); // set the 'height' to the variable h.
+
+svg.selectAll('rect') // add the rectangles with selectAll('rect')
+		.data(dataset) // set the data to the dataset from above
+		.enter() // append the rectanlges
+		.append('rect')
+			.attr('x', function(d, i) { // d is how to reference the dataset, i is the index
+				return i * (w / dataset.length); // set the x position of the bar by the order according to the dataset.
+			})
+			.attr('y', function(d) { // set the y function, just going to use the dataset
+				return h - (d * 4); // have to take the height and subtract the data element
+			}) // this sets it at the bottom
+			.attr('width', w / dataset.length - padding)// setting the width by dividing the length of the dataset minus the padding.
+			.attr('height', function(d) {// setting the height which will be dynmaic depending on the dataset
+				return d * 4;// 4 represents the elements in the dataset array (arrays begin with zero).
+			})
+			.style('fill', 'steelblue');// add some color to the bars.
