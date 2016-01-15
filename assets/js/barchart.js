@@ -5,7 +5,6 @@ var dataset = [5, 10, 15, 20, 25]; // defining a dataset.
 var svg = d3.select('#output').append('svg') // create and append the svg instance to an HTML element.
 						.attr('width', w)                // set the 'width' to the variable w.
 						.attr('height', h);							 // set the 'height' to the variable h.
-
 // add a function to pick the color
 function colorPicker (v) {
 	if (v <= 20) {
@@ -14,7 +13,6 @@ function colorPicker (v) {
 		return '#ff00ff';
 	}
 }
-
 svg.selectAll('rect')												 // add the rectangles with selectAll('rect')
 		.data(dataset)													 // set the data to the dataset from above
 		.enter()																 // append the rectanlges
@@ -24,11 +22,12 @@ svg.selectAll('rect')												 // add the rectangles with selectAll('rect')
 		y: function(d) { return h - (d * 4); },
 		width: w / dataset.length - padding,
 		height: function(d) { return d * 4; },
-		fill: function(d) { return 'rgb(' + (d * 10) + ', 70, 130)';}
+		fill: function (d) { return colorPicker(d); }
+		//fill: function(d) { return 'rgb(' + (d * 10) + ', 70, 130)';}
 });// we can also creat an Object to contain all the code.
 
 			// this is a messy way of adding attributes one by one.
-			// but a good way to learn how D3 works.
+			//
 
 			//.attr('x', function(d, i) { // d is how to reference the dataset, i is the index
 			//	return i * (w / dataset.length); // set the x position of the bar by the order according to the dataset.
