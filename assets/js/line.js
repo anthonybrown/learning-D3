@@ -44,7 +44,7 @@ var labels = svg.selectAll('text')
 		y: function(d) { return h - d.sales; },
 		'font-size': '12px',
 		'font-family': 'sans-serif',
-		'fill': '#373737',
+		'fill': '#333',
 		'text-anchor': 'start',
 		'dy': '.35em',
 		'font-weight': function(d, i) {
