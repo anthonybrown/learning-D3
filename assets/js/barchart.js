@@ -8,9 +8,9 @@ var svg = d3.select('#output').append('svg') // create and append the svg instan
 // add a function to pick the color
 function colorPicker (v) {
 	if (v <= 20) {
-		return '#777';
+		return 'rgb(' + (v * 10) + ', 70, 130)'; // this will return a gradient
 	} else if (v > 20) {
-		return '#ff00ff';
+		return '#ff00ff';// hot pick
 	}
 }
 svg.selectAll('rect')												 // add the rectangles with selectAll('rect')
