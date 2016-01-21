@@ -2,6 +2,7 @@
 var h = 350;
 var w = 400;
 
+// Data Source
 monthlySales = [
 	{ 'month': 10, 'sales': 90 },
 	{ 'month': 20, 'sales': 140 },
@@ -24,6 +25,7 @@ function salesKPI (d) {
 	}
 }
 
+// show min or max function
 function showMinMax (ds, col, val, type) {
 	var max = d3.max(ds, function (d) { return d[col]; });
 	var min = d3.min(ds, function (d) { return d[col]; });
@@ -55,7 +57,6 @@ var dots = svg.selectAll('circle')
 	});
 
 // Add Labels
-
 var labels = svg.selectAll('text')
 	.data(monthlySales)
 	.enter()
