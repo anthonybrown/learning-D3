@@ -21,6 +21,23 @@ function buildLine() {
 							});
 }
 
+function showTotals () {
+	var t = d3.select('#graph2').append('table');
+
+	// get total
+	for (var i = 0; i < ds.length; i++) {
+		salesTotal += ds[i]['sales']*1; // *1 converts to a number.
+	}
+
+	// add the total
+	var tr = t.selectAll('tr')
+							.data([1])
+							.enter()
+							.append('tr')
+							.append('td')
+							.text('Sales Total: ' + salesTotal);
+}
+
 d3.csv('assets/MonthlySales.csv', function (error, data) {
 	if(error)
 		console.log('There was an error')
@@ -29,4 +46,5 @@ d3.csv('assets/MonthlySales.csv', function (error, data) {
 		ds = data;
 
 	buildLine();
+	showTotals();
 });
