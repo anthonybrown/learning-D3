@@ -107,3 +107,23 @@ nav {
 
 .char2 rect {
 }
+
+/*================================================================
+ * Styles for History Chart
+ * ==============================================================*/
+
+.axis path {
+	fill: none;
+	stroke: #CCC;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-family: Lato;
+	font-size: 13px;
+}
+
+.legend {
+	font-size: 14px;
+	font-weight: 900;
+}

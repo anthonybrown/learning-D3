@@ -1,0 +1,83 @@
+{
+	"data": [
+	{
+		"id": "null",
+		"snapshotstart": "01-20-2016 17:30:00 GMT-04:00",
+		"domain": null,
+		"srcstr": "192.168.10.22",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "9724618"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-20-2016 17:30:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "192.168.1.172",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "3999342"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-13-2016 16:30:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "192.168.1.180",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "646553"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-15-2016 08:30:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "199.27.76.167",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "423595"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-13-2016 12:30:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "192.168.1.145",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "298296"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-12-2016 18:30:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "17.253.11.202",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "263407"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-18-2016 09:30:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "45.58.74.1",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "257195"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-18-2016 10:00:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "192.168.10.2",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "255334"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-20-2016 14:30:00 GMT-04:00",
+		"domain": "null",
+		"srcstr": "104.96.210.173",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "216329"
+	},
+	{
+		"id": "null",
+		"snapshotstart": "01-18-2016 12:30:00 GMT-04:00",
+		"domain": null,
+		"srcstr": "68.64.22.249",
+		"collectorid": "mzeal_mnc11",
+		"packetcount": "200698"
+	}
+]}

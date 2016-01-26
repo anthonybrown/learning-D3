@@ -57,7 +57,6 @@ var labels = svg.selectAll('text')
 	});
 
 	// SCATTER PLOT
-
 	svg = d3.select('#plot').append('svg')
 		.attr({
 			width  : w,
